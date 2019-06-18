@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title></title>
+        <style>
+            p{
+               max-width:150px; 
+               padding:10px;
+               border-radius: 15px;
+
+            }
+            .app{
+                display: flex;
+                flex-direction: column;
+                align-content: center;
+                
+            }
+            .msgContainer{
+                display: flex;
+                flex-direction: column;
+                justify-content:flex-end;
+                width: 500px;
+                height: 500px;
+            }
+
+            .vc{
+                background:lightblue;
+                text-align: right;
+                margin-left: 15%;
+            }
+            .outro{
+                background: darkgray;
+                margin-left:-15%;
+            }
+            
+            input[type="text"]{
+                padding:10px;
+                border-radius: 15px;
+                border:1px solid black;
+                outline: none;
+            }
+            input[type="button"]{
+                padding: 10px;
+                border-radius: 15px;
+                border:none;
+                cursor: pointer;
+                outline: none;
+
+            }
+            input[type="button"]:hover{
+                background: darkgrey;
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+        <div class="app">
+            <h1 class="status"></h1>
+            <div class="msgContainer"></div>
+            <div>
+                <input placeholder="Type your messages" type="text" id="msg" />
+                <input onclick="sendMessage()" type="button" value="enviar" onclick="sendMessage()"/>
+            </div>
+        </div>
+         </center>
+        <script src="ws-client.js"></script>
+    </body>
+</html>
